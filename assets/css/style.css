@@ -1,3 +1,33 @@
 .crystal {
 width: 150px;
 }
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    
+}
+
+h2 {
+    font-size: 26px;
+}
+
+body {
+    background-repeat: repeat;
+    background-image: url(../images/circles-dark.png);
+}
+
+#winning-number {
+    font-size:24px;
+    text-align: center;
+
+}
+
+#user-number {
+    font-size:24px;
+    text-align: center;
+}
+
+b {
+    font-weight: bold;
+}
