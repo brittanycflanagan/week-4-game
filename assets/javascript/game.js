@@ -11,6 +11,7 @@ var numberOfLosses = 0;
     
 
 // Global Functions
+
 function checkForWin () {
     if (userNumber === winningNumber) {
         console.log ("you won!");
@@ -51,16 +52,7 @@ function resetGame() {
 }
 
 
-// when you click on a crystal, give it the value of a random number
-
-//     function clickCrystal (value, id) {
-//     $("#"+id).click(function(event){
-//         userNumber = value + userNumber;
-//         console.log(value);
-//         $("#user-number").text(userNumber);
-//         checkForWin();
-//     });
-// }
+// when you click on a crystal, add it's value to the userNumber & check for win
 
 $("#crystal1").click(function(event){
     userNumber = crystal1 + userNumber;
@@ -90,9 +82,17 @@ $("#crystal4").click(function(event){
     checkForWin();
 });
 
+    // Tried to merge into one function, but could not get it it work properly
+    //     function clickCrystal (value, id) {
+    //     $("#"+id).click(function(event){
+    //         userNumber = value + userNumber;
+    //         console.log(value);
+    //         $("#user-number").text(userNumber);
+    //         checkForWin();
+    //     });
+    // }
 
-
-// pick a random number for each crystal & for the winning number
+// pick a random number for each crystal & for the winning number on document load
  $(document).ready(function() {
     $("#user-number").text(userNumber);
     winningNumber = Math.floor((Math.random() * 120) + 19); //need to look at it being inclusive
